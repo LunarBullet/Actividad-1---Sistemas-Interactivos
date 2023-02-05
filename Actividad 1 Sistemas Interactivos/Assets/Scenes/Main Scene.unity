@@ -208,8 +208,9 @@ GameObject:
   - component: {fileID: 242104417}
   - component: {fileID: 242104416}
   - component: {fileID: 242104415}
+  - component: {fileID: 242104418}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Check Deck Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242104416}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242104418}
+        m_TargetAssemblyTypeName: MyRestApiManager, Assembly-CSharp
+        m_MethodName: GetMyPlayerInfoOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242104416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +331,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242104413}
   m_CullTransparentMesh: 1
+--- !u!114 &242104418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242104413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b592f24510fa3b1439640b49ec17e4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDeckUserIDCounter: 1
+  DeckCards: 
+  myRawImageList:
+  - {fileID: 1105291849}
+  - {fileID: 236267650}
+  - {fileID: 1971096427}
+  - {fileID: 1708134909}
+  - {fileID: 792465663}
 --- !u!1 &410707870
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 410707873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242104418}
+        m_TargetAssemblyTypeName: MyRestApiManager, Assembly-CSharp
+        m_MethodName: ChangeMyDeckUserNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &410707873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +656,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.34316605, g: 0.20932715, b: 0.754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -742,7 +787,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 662083451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242104418}
+        m_TargetAssemblyTypeName: MyRestApiManager, Assembly-CSharp
+        m_MethodName: ChangeMyDeckUserNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &662083451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: User 1
+  m_text: User 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1390,7 +1447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1231005398}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242104418}
+        m_TargetAssemblyTypeName: MyRestApiManager, Assembly-CSharp
+        m_MethodName: ChangeMyDeckUserNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1231005398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,7 +1556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: User 1
+  m_text: User 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1788,7 +1857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1762659033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242104418}
+        m_TargetAssemblyTypeName: MyRestApiManager, Assembly-CSharp
+        m_MethodName: ChangeMyDeckUserNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1762659033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1958,7 +2039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: User 1
+  m_text: User 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
